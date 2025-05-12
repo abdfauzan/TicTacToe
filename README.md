@@ -1,6 +1,6 @@
 # TicTacToe
 ```bash 
-Please import backend application user use intellij idea
+Please import backend application user can use intellij idea
 ```
 
 ![image](https://github.com/user-attachments/assets/30c8e360-4a03-4f88-b3de-f0890647d18b)
