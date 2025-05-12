@@ -1,17 +1,20 @@
 # TicTacToe
-### Please import backend use Java IDE
+```bash 
+Please import backend application user use intellij idea
+```
 
 ![image](https://github.com/user-attachments/assets/30c8e360-4a03-4f88-b3de-f0890647d18b)
 
-### After do mvn clean instal user can run TicTacToeDbApplication under tictactoe_db to populate data in database
+```bash
+After do mvn clean install user can run TicTacToeDbApplication under tictactoe_db to populate data in database
 
-### After that user can run TicTacToeApiApplication under tictactoe_api
+After that user can run TicTacToeApiApplication under tictactoe_api
 
-### Please import frondend use Visual Studio Code
+Please import frondend application user can use Visual Studio Code
 
-### run npm run build
-### run npm run start
-
+run npm run build
+run npm run start
+```
 ### Home
 ![image](https://github.com/user-attachments/assets/2e488123-02fc-44c1-8c89-838d4fdef165)
 
