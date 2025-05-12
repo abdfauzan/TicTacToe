@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: tictactoe_game_service
+  datasource:
+    username: postgres
+    password: postgre
+    url: jdbc:postgresql://localhost:5432/tictactoe_game_db?currentSchema=tictactoe_schema
+    driverClassName: org.postgresql.Driver

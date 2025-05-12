@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/feature/changelogs/28_AIDifficulty.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_BoardSizeConfiguration.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_GameMode.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_User.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_TurnTimeDurationConfiguration.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_PopulateAIDifficulty.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_PopulateBoardSizeConfiguration.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_PopulateGameMode.sql
+  - include:
+      file: classpath:db/feature/changelogs/28_PopulateTurnTimeDurationConfiguration.sql

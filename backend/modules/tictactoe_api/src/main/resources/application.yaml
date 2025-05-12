@@ -1,0 +1,99 @@
+server:
+  port: 8080
+  ssl:
+    enabled: false
+    key-alias: tomcat
+    key-password: ${KEY-PASS:changeit}
+    key-store: file:/apps/conf/keystore.jks
+    key-store-provider: SUN
+    key-store-type: JKS
+    key-store-password: ${KEY-PASS:changeit}
+  error:
+    whitelabel:
+      enabled: false
+  forward-headers-strategy: none
+  servlet:
+    contextPath: /tictactoe_game_service
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    entity-id: tictactoe
+    id: "028"
+    name: tictactoe-game-service
+    apiVersion: 2.8.0
+    serviceName: tictactoe-game-service
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      show_sql: false
+      ddl-auto: none
+      use_sql_comments: true
+      format_sql: true
+      jdbc:
+        lob.non_contextual_creation: true
+  devtools:
+    add-properties: false
+  datasource:
+    username: postgres
+    password: postgre
+    url: jdbc:postgresql://localhost:5432/tictactoe_game_db?currentSchema=tictactoe_schema
+    driverClassName: org.postgresql.Driver
+  liquibase:
+    enabled: false
+    change-log: classpath:db/change_log_master.yaml
+  cloud:
+    config:
+      enabled: false
+      uri:
+      label:
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    groups-order: DESC
+    operationsSorter: method
+    enabled: true
+    disable-swagger-default-url: true
+  api-docs:
+    enabled: true
+logging:
+  level:
+    web: info
+    root: info
+    spring: debug
+    app: info
+    com:
+      tictactoe:
+        game:
+          client: debug
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+jwt:
+  secret: thisIsMysecreg0123456789dhaiwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+  expiration: 28800000
+
+webclient:
+  keep-alive: true #wait until server give response ?
+  conn-timeout: 30000 #how long we wait until connection is established ( in milliseconds )
+  response-timeout: 300000 #how long we wait until server give response ( in millisecond )
+  log-level: INFO # INFO | DEBUG | ERROR

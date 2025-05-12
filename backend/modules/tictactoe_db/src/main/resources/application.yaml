@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: tictactoe_game_db
+  datasource:
+    username: postgres
+    password: postgre
+    url: jdbc:postgresql://localhost:5432/tictactoe_game_db?currentSchema=tictactoe_schema
+    driverClassName: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:db/change_log_master.yaml
